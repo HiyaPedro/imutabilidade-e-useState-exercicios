@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import styled, {createGlobalStyle} from 'styled-components'
+import React, { useState } from 'react'
+import styled, { createGlobalStyle } from 'styled-components'
 import PokemonCard from './Components/PokemonCard/PokemonCard';
 
 const GlobalStyles = createGlobalStyle`
@@ -14,7 +14,16 @@ const FlexContainer = styled.div`
   flex-wrap: wrap;
 `
 function App() {
-  
+
+  const [pokemon, setPokemon] = useState({
+    name: "Pichu",
+    type: "Electric",
+    evolved: false,
+    weight: 2,
+    color: 'yellow',
+    image: 'https://archives.bulbagarden.net/media/upload/thumb/f/f3/0172Pichu.png/120px-0172Pichu.png',
+    id: 0
+  })
 
   // Para fazer seus próximos pokemons, crie novos estados ultilizando como referência o objeto abaixo:
   /*{
@@ -27,17 +36,20 @@ function App() {
     id: 0
   }
   */
-  
 
-  return ( <>
-  <GlobalStyles/>
+
+  return (<>
+    <GlobalStyles />
     <FlexContainer>
       {/* Aqui neste componente, passe as props. Lembre-se que também é possivel passar a função de setState via props! */}
-      <PokemonCard/>
+      <PokemonCard 
+      pokemon={pokemon}
+      setPokemon={setPokemon}
+      />
       {/* Crie aqui seus próximos pokemons! */}
     </FlexContainer>
   </>
-    
+
   );
 }
 

@@ -28,6 +28,14 @@ Primeiro, vamos analisar todo o código que vocês estão recebendo.
 - O que a função `evoluirPokemon` está fazendo no momento?
 - Quais informações estão sendo recebidas pelo componente PokemonCard via props?
 
+Look at `App.js`, what can you see that you already know?
+- Do you understand `<GlobalStyles/>`?
+- Analyze the values that are expected by `props` in the created PokemonCard component, what type of data is being expected in this component?
+
+- Now analyze `JSX`, what components are there in this application?
+- What is inside the `PokemonCard` component?
+- What is the `evolvePokemon` function doing at the moment?
+- What information is being received by the PokemonCard component via props?
 
 # Exercício 2
 
@@ -37,6 +45,11 @@ Seu trabalho nesse momento é criar o estado do pokémon e passar as Props corre
 
 Você vai perceber que é necessário passar uma cor para os styled-components. Você não precisa entender 100% como isso funciona agora, mas se você passar as props corretamente, vai dar certo! :) 
 
+Now it's time to create your own cards, to collect pokemon information, you can use the website https://bulbapedia.bulbagarden.net/wiki/Main_Page as a reference!
+
+Your job at this point is to create the pokemon's state and pass the Props correctly from the `App.js` component into the `PokemonCard` component. Check that they are all working.
+
+You will notice that it is necessary to pass a color to the styled-components. You don't need to understand 100% how this works now, but if you pass the props correctly, it will work! :)
 
 # Exercício 3
  Implemente a função de evoluir o Pokemon. Nessa função de onClick, você precisa modificar o estado criado no App.js para que, ao clicar, o Pokemon evolua pra sua próxima forma, se isso for possível.
@@ -51,3 +64,16 @@ Para isso, você precisa modificar os dados de dentro do objeto salvo no useStat
 - Peso
 
 Depois disso, crie novos cards com pokemons diferentes para praticar :) 
+
+Implement the function of evolving Pokemon. In this onClick function, you need to modify the state created in App.js so that, when clicked, the Pokemon evolves into its next form, if that is possible.
+Realize that some pokemons evolve and others don't.
+To do this, you need to modify the data inside the object saved in useState. Using a spread operator, modify only the data necessary for the pokemon to evolve:
+
+- Color
+- Image
+- Name
+- Type
+- Evolved (note that this is a boolean, if it is already evolved it must be true; otherwise, false.)
+- Weight
+
+After that, create new cards with different pokemons to practice :)
